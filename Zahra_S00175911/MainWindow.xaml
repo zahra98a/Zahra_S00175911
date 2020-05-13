@@ -7,13 +7,26 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
         Loaded="Window_Loaded">
-    
+    <Window.Resources>
+        <DataTemplate x:Key="ListBoxTemplate">
+            <StackPanel Orientation="Horizontal" Margin="6">
+                <Image Source="{Binding Image}" Width="77"/>
+
+                <StackPanel>
+                    <TextBlock Text="{Binding Name}" Foreground="RosyBrown" FontSize="20" />
+                </StackPanel>
+
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="329*"/>
             <ColumnDefinition Width="463*"/>
         </Grid.ColumnDefinitions>
-        <ListBox Name="lbPhones" HorizontalAlignment="Left" Height="280" Margin="94,77,0,0" VerticalAlignment="Top" Width="206" SelectionChanged="lbPhones_SelectionChanged"/>
+        <ListBox Name="lbPhones" HorizontalAlignment="Left" Height="280" Margin="94,77,0,0" VerticalAlignment="Top" Width="206" SelectionChanged="lbPhones_SelectionChanged"
+                 ItemTemplate="{StaticResource ListBoxTemplate}"/>
         <TextBlock Name="tbPrice" HorizontalAlignment="Left" Height="65" Margin="40,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239" Grid.Column="1"/>
         <Image Name="imgPhone" HorizontalAlignment="Left" Height="125" Margin="40,207,0,0" VerticalAlignment="Top" Width="239" Grid.Column="1"/>
 

@@ -4,10 +4,17 @@
              xmlns:local="clr-namespace:Zahra_S00175911"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              StartupUri="MainWindow.xaml">
-    
-    <Application.Resources>
-        <Style TargetType="TabControl">
+<Application.Resources>
+
+<Style TargetType="Window">
             <Setter Property="Background" Value="#FFFBF3F3"/>
         </Style>
+
+        <Style TargetType="ListBox">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Background" Value="WhiteSmoke"/>
+            <Setter Property="BorderBrush" Value="#FFC91717"/>
+        </Style>
+
     </Application.Resources>
 </Application>
