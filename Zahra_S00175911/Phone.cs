@@ -11,6 +11,7 @@ namespace Zahra_S00175911
     {
         //properties   
 
+        public int ID { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
         public string OperatingSystem { get; set; }
@@ -18,8 +19,9 @@ namespace Zahra_S00175911
         public string Phone_Image { get; set; }
         // public List<Phone> phones { get; set; }
 
-        public Phone(string name, decimal price, string operatingSystem, string oS_Image, string phone_Image)
+        public Phone(int id, string name, decimal price, string operatingSystem, string oS_Image, string phone_Image)
         {
+            ID = id;
             Name = name;
             Price = price;
             OperatingSystem = operatingSystem;
