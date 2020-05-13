@@ -53,15 +53,14 @@ namespace Zahra_S00175911
                             {
                                 p.Price
                             };
-    
-                tbPrice.Text = query.ToString();
 
-                //display selected phone image
-               //  imgPhone.Source = new BitmapImage(new Uri($"/images/{Image}", UriKind.Relative));
+                tbPrice.Text = query.ToString();
+             
+                //display selected phone image    
+              //  imgPhone.Source = new BitmapImage(new Uri($"/images/{selectedPhone.Phone_Image}", UriKind.Relative));
 
 
             }
-
         }
     }
 }

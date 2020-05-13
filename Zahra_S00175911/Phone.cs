@@ -24,6 +24,10 @@ namespace Zahra_S00175911
             Price = Price + (percentageValue * Price);
         }
 
+        public override string ToString()
+        {
+            return string.Format($"{ID} {Name} {Price} {OperatingSystem} {OS_Image} {Phone_Image}");
+        }
         public Phone(int id, string name, decimal price, string operatingSystem, string oS_Image, string phone_Image)
         {
             ID = id;
@@ -34,7 +38,7 @@ namespace Zahra_S00175911
             Phone_Image = phone_Image;
         }
 
-       
+
         public class PhoneData : DbContext
         {
             public PhoneData()  { }
