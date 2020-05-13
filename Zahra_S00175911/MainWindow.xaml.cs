@@ -30,12 +30,38 @@ namespace Zahra_S00175911
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             
-                var query = from t in db.phones
-                            select t.Name;
+                var query = from p in db.phones
+                            select p.Name;
 
             var teams = query.ToList();
 
             lbPhones.ItemsSource = teams;
+
+        }
+
+        private void lbPhones_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // Phone chosen 
+            string selectedPhone = (string)lbPhones.SelectedItem;
+
+            //checking null data 
+            if (selectedPhone != null)
+            {
+                var query = from p in db.phones
+                            where p.Name == selectedPhone
+                            select new
+                            {
+                                p.Price
+                            };
+    
+                tbPrice.Text = query.ToString();
+
+                //display selected phone image
+               //  imgPhone.Source = new BitmapImage(new Uri($"/images/{Image}", UriKind.Relative));
+
+
+            }
+
         }
     }
 }

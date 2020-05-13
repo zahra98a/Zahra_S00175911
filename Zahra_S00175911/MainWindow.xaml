@@ -13,7 +13,7 @@
             <ColumnDefinition Width="329*"/>
             <ColumnDefinition Width="463*"/>
         </Grid.ColumnDefinitions>
-        <ListBox Name="lbPhones" HorizontalAlignment="Left" Height="280" Margin="94,77,0,0" VerticalAlignment="Top" Width="206"/>
+        <ListBox Name="lbPhones" HorizontalAlignment="Left" Height="280" Margin="94,77,0,0" VerticalAlignment="Top" Width="206" SelectionChanged="lbPhones_SelectionChanged"/>
         <TextBlock Name="tbPrice" HorizontalAlignment="Left" Height="65" Margin="40,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239" Grid.Column="1"/>
         <Image Name="imgPhone" HorizontalAlignment="Left" Height="125" Margin="40,207,0,0" VerticalAlignment="Top" Width="239" Grid.Column="1"/>
 

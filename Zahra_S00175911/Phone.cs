@@ -19,6 +19,11 @@ namespace Zahra_S00175911
         public string Phone_Image { get; set; }
         // public List<Phone> phones { get; set; }
 
+        public void IncreasePrice(decimal percentageValue)
+        {
+            Price = Price + (percentageValue * Price);
+        }
+
         public Phone(int id, string name, decimal price, string operatingSystem, string oS_Image, string phone_Image)
         {
             ID = id;
@@ -29,10 +34,7 @@ namespace Zahra_S00175911
             Phone_Image = phone_Image;
         }
 
-        public void IncreasePrice(decimal percentageValue )
-        {
-            Price = Price + (percentageValue*Price);
-        }
+       
         public class PhoneData : DbContext
         {
             public PhoneData()  { }

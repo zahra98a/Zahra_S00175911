@@ -18,7 +18,7 @@ namespace DataManagement
             {
                 Phone p1 = new Phone(1,"Samsung S20", 500, "Android", "/images/android.png", "/images/s20.jpg");
 
-                Phone p2 = new Phone(2,"iphone 11", 600, "Ios", "/images/apple.png", "/images/iphone11.jpg");
+                Phone p2 = new Phone(2,"iphone 11", 600, "Ios", "/images/apple.png", "/images/iphone11.png");
 
                 //adding objects to DB
                 db.phones.Add(p1);
